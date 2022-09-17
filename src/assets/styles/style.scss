@@ -1,0 +1,519 @@
+@import "./variables.scss";
+@import "./typed.scss";
+
+h1 {
+    font-size: 55px;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+/*
+Layouts
+*/
+.header-wrapper {
+    position: relative;
+    background: white;
+    border-bottom: 0px;
+    backdrop-filter: blur(100px);
+    max-height: 120px;
+    height: 120px;
+    padding: 12px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .gradient-background1 {
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        left:10%;
+        top: -60px;
+        opacity: 0.5;
+        filter: blur(60px);
+        background: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
+    }
+    .gradient-background2 {
+        position: absolute;
+        width: 22%;
+        height: 100%;
+        right: 10%;
+        top: -70px;
+        opacity: 0.5;
+        filter: blur(60px);
+        background: linear-gradient(94.74deg, #001AFF 8.97%, #6EE5C2 94.65%);
+    }
+    .btn-follow-us {
+        background: none;
+        border: 1px solid black;
+        border-radius: 100px;
+        padding: 12px 25px;
+        font-weight: bold;
+        color: black;
+        img {
+            margin-left: 10px;
+        }
+    }
+    .nav-link {
+        color: black;
+        font-weight: bold;
+        margin-left: 20px;
+    }
+}
+
+.footer-wrapper {
+    position: relative;
+    max-width: 800px;
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+
+    .pages-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-bottom: 30px;
+
+        .left {
+            display: flex;
+            h5 {
+                font-weight: bold;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            h6 {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .gradient-background2 {
+        position: absolute;
+        width: 70%;
+        height: 33%;
+        right: 15%;
+        bottom: 0px;
+        opacity: 0.5;
+        filter: blur(60px);
+        background: linear-gradient(94.74deg, #6100FF 8.97%, #00FFF0 94.65%);
+    }
+}
+
+/*
+Pages
+*/
+
+.landing-page-wrapper {
+    margin: auto;
+    
+    .slide-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        .type-products {
+            padding: 0 0 0 3px;
+            background: none;
+            &::before { font-weight: 600; }
+            @include typed(
+                "Products", "Websites",
+                2,
+                (caret-width: 2px, caret-space: 2px)
+            );
+        }
+
+        .btn-contact {
+            border: 1px solid black;
+            font-weight: bold;
+            color: white;
+            background: black;
+            padding: 20px 40px;
+            border-radius: 37px;
+        }
+    
+        .btn-join {
+            border: 1px solid black;
+            font-weight: bold;
+            color: black;
+            background: white;
+            padding: 20px 40px;
+            border-radius: 37px;
+        }
+    }
+
+    .firms-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .affaliate-wrapper {
+        margin-top: 70px;
+        padding: 20px;
+        background: #FFD644;
+        border-radius: 37px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        max-width: 850px;
+        .left-panel {
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            border-right: 2px solid black;
+        }
+        .right-panel {
+            padding-left: 20px;
+            padding-right: 20px;
+            button {
+                display: flex;
+                align-items: center;
+                border: none;
+                background: none;
+                padding-left: 0;
+                padding-right: 20px;
+                font-weight: bold;
+                font-size: 1.25em;
+                color: black;
+
+                .play-icon {
+                    box-sizing: border-box;
+                    width: 10px;
+                    height: 10px;
+                    border-width: 5px 0px 5px 8px;
+                    border-color: transparent transparent transparent black;
+                    border-style: solid;
+                    margin-left: 5px;
+                    margin-top: 3px;
+                }
+            }
+
+            
+        }
+    }
+
+    .industry-wrapper {
+        padding: 40px;
+        background: #F3F3F8;
+        border-radius: 37px;
+        width: 80%;
+        max-width: 850px;
+    }
+
+    .gradient-text {
+        background: linear-gradient(75.96deg, #FFC83A 13.64%, #FF008A 46.53%, #6100FF 78.88%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+    }
+
+    .digital-products-wrapper {
+        max-width: 1350px;
+        width: 80%;
+    }
+
+    .help-wrapper {
+        max-width: 1350px;
+        width: 80%;
+        margin: auto;
+
+        .help-description {
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .email-panel {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #10C6FF1A;
+            border-radius: 10px;
+        }
+
+        .email-input {
+            margin-left: 5px;
+            border: none;
+            background-color: #10C6FF00;
+            outline: none;
+        }
+
+        .subscribe-btn {
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 3px 27px 3px 27px;
+            box-shadow: 0px 6px 20px #79C5DD;
+        }
+    }
+
+    .github-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        background: #BE402D;
+        max-width: 700px;
+        width: 60%;
+        margin: auto;
+        padding: 20px;
+
+        .left {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            h5 {
+                color:white ;
+                font-weight: 500;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            color: white;
+            border-left: 2px solid white;
+
+            h4 {
+                font-weight: 200;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+            .play-btn {
+                width: 40px;
+                height: 40px;
+                box-sizing: border-box;
+                border-width: 20px 0px 20px 20px;
+                border-color: transparent transparent transparent white;
+                border-style: solid;
+                border-radius: 5px;
+            }
+        }
+    }
+    
+}
+
+
+
+/*
+Copmonents
+*/
+
+.product-card {
+    .product-card-img {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.customer-review {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+    .customer-review-description {
+        text-align: center;
+        line-height: 2.5;
+    }
+
+    $default-height: 80px;
+    $default-width: 80px;
+
+    $level0-width: 90px;
+    $level0-height: 90px;
+    $level1-width: 70px;
+    $level1-height: 70px;
+    $level2-width: 50px;
+    $level2-height: 50px;
+
+    $level-2-left: 85%;
+    $level-1-left: 70%;
+    $level0-left: 50%;
+    $level1-left: 30%;
+    $level2-left: 15%;
+
+    .customer-avatars {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .item {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
+        transition: box-shadow 1s,  height 250ms, width 250ms, left 1s, margin-top 1s, line-height 250ms, background-color 1s;
+
+        .customer-avatar {
+            box-sizing: content-box;
+            border-radius: 10000px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .level-2 {
+        height: $level2-height;
+        width: $level2-width;
+        line-height: $level2-height;
+        // left: $level-2-left;
+    }
+    
+    .level-1 {
+        height: $level1-height;
+        width: $level1-width;
+        line-height: $level1-height;
+        // left: $level-1-left;
+    }
+    
+    .level0 {
+        height: $level0-height;
+        width: $level0-width;
+        // line-height: $level0-height;
+        // left: $level0-left;
+        .customer-avatar {
+            box-sizing: content-box;
+            border: 4px solid black;
+            padding: 3px;
+            border-radius: 10000px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .level1 {
+        height: $level1-height;
+        width: $level1-width;
+        line-height: $level1-height;
+        // left: $level1-left;
+    }
+    
+    .level2 {
+        height: $level2-height;
+        width: $level2-width;
+        line-height: $level2-height;
+        // left: $level2-left;
+    }
+
+    .left-enter {
+        opacity: 0;
+        left: $level2-left;
+        height: $level2-height - $default-height;
+        width: $level2-width - $default-width;
+        line-height: $level2-height - 30;
+    
+        &.left-enter-active {
+            opacity: 1;
+            left: $level2-left;
+            height: $level2-height;
+            width: $level2-width;
+            line-height: $level2-height;
+            transition: box-shadow 1s,  left 1s, opacity 1s, height 250ms, width 250ms, margin-top 1s, line-height 1s;
+        }
+    }
+    
+    .left-leave {
+        opacity: 1;
+        left: $level-2-left;
+        height: $level2-height;
+        width: $level2-width;
+        line-height: $level2-height;
+        z-index: -1;
+    
+        &.left-leave-active {
+            z-index: -1;
+            left: $level-2-left;
+            opacity: 0;
+            height: $level2-height - $default-height;
+            width: $level2-width - $default-width;
+            line-height: 120px;
+            transition: box-shadow 1s,  left 1s, opacity 1s, height 250ms, width 250ms, margin-top 1s, line-height 1s;
+        }
+    }
+    
+    .right-enter {
+        opacity: 0;
+        left: $level-2-left;
+        height: $level2-height - $default-height;
+        width: $level2-width - $default-width;
+        line-height: $level2-height - 30;
+    
+        &.right-enter-active {
+            left: $level-2-left;
+            opacity: 1;
+            height: $level2-height;
+            line-height: $level2-height;
+            width: $level2-width;
+            transition: box-shadow 1s,  left 1s, opacity 1s, height 250ms, width 250ms, margin-top 1s, line-height 1s;
+        }
+    }
+    
+    .right-leave {
+        left: $level2-left;
+        height: $level2-height;
+        opacity: 1;
+        line-height: $level2-height;
+        width: $level2-width;
+    
+        &.right-leave-active {
+            left: $level2-left;
+            opacity: 0;
+            height: $level2-height - $default-height;
+            width: $level2-width - $default-width;
+            line-height: $level2-height - 30;
+            transition: box-shadow 1s,  left 1s, opacity 1s, height 250ms, width 250ms, margin-top 1s, line-height 1s;
+        }
+    }
+}
