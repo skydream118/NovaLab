@@ -152,7 +152,7 @@ Pages
             background: none;
             &::before { font-weight: 600; }
             @include typed(
-                "Products", "Websites",
+                "Products", "Websites", "Applications", "Blockchain Experiences", "API's",
                 2,
                 (caret-width: 2px, caret-space: 2px)
             );
@@ -199,6 +199,9 @@ Pages
             display: flex;
             align-items: center;
             border-right: 2px solid black;
+            h5 {
+                font-weight: bold
+            };
         }
         .right-panel {
             padding-left: 20px;

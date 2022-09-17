@@ -140,7 +140,7 @@ const LandingPage = () => {
         <div className="affaliate-wrapper mx-auto">
           <div className="left-panel">
             <img src={LinkImg} alt="link" />
-            <h5>Join our Affaliate program</h5>
+            <h5 className="ms-3">Join our Affaliate program</h5>
           </div>
           <div className="right-panel">
             <h6>
