@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer-wrapper">
-      <div className="pages-wrapper">
+      <div className="pages-wrapper px-0 px-md-5">
         <div className="left">
           <div className="d-flex flex-column px-3">
             <h5 className="mb-3">PAGES</h5>
