@@ -307,10 +307,10 @@ const LandingPage = () => {
             <img src={Github} alt="Github" className="github-img" />
           </div>
           <div className="right px-3">
-            <h4 className="fs-6 fs-md-3">
+            <h4 className="fs-4">
               Open-Source Github Library:<span>Nova Labs</span>
             </h4>
-            <div className="play-btn"></div>
+            <div className="play-btn ms-1"></div>
           </div>
         </div>
       </div>
