@@ -121,11 +121,11 @@ const LandingPage = () => {
             <img className="px-2" src={NodeImg} alt="Node.js" />
             <img className="px-2" src={SolidityImg} alt="Solidity" />
             <img className="px-2" src={VectorImg} alt="Vector" />
-            <h6>+ Many More</h6>
+            <h6 className="mb-0">+ Many More</h6>
           </div>
-          <div className="d-flex mt-5">
-            <button className="btn-contact mx-3">Contact Us</button>
-            <button className="btn-join mx-3">Join Nova Labs</button>
+          <div className="d-flex flex-column flex-md-row mt-5 gap-3 w-100 justify-content-center">
+            <button className="btn-contact w-sm-100">Contact Us</button>
+            <button className="btn-join w-sm-100">Join Nova Labs</button>
           </div>
         </div>
 
@@ -140,7 +140,7 @@ const LandingPage = () => {
         <div className="affaliate-wrapper mx-auto">
           <div className="left-panel">
             <img src={LinkImg} alt="link" />
-            <h5>Join our Affaliate program</h5>
+            <h5 className="ms-3">Join our Affaliate program</h5>
           </div>
           <div className="right-panel">
             <h6>
@@ -161,13 +161,13 @@ const LandingPage = () => {
         <div className="industry-wrapper mt-5 mx-auto">
           <h3 className="gradient-text">Industry-focused Development</h3>
           <div className="d-flex justify-content-center align-items-center">
-            <h5 className="lh-lg">
+            <h6 className="lh-sm">
               All our products are specific to the demands of your industry. We
               pledge to properly examine your market to ensure the success of
               your digital product and to develop a creative solution that is
               tailored to your company, reflects your values, and appeals to the
               appropriate demographics.
-            </h5>
+            </h6>
             <div className="flex-shrink-0">
               <img src={IndustryImg} alt="Industry" />
             </div>
@@ -178,11 +178,11 @@ const LandingPage = () => {
           <h2 className="gradient-text text-start">
             We create world-class digital products
           </h2>
-          <h6>
+          <h5 className="text-center text-md-start">
             By information about design the world to the best instructors, heatc
             helping By information
-          </h6>
-          <div className="row mt-4">
+          </h5>
+          <div className="row mt-4 gy-5">
             <div className="col-md-6 col-sm-12">
               <ProductCard product={products[0]} />
             </div>
@@ -190,7 +190,7 @@ const LandingPage = () => {
               <div className="row gy-5">
                 {products.slice(1).map((product, index) => {
                   return (
-                    <div className="col-md-6">
+                    <div className="col-6">
                       <ProductCard
                         product={product}
                         size="sm"
@@ -204,7 +204,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        <div className="customer-reviewer-wrapper mt-5">
+        <div className="customer-reviewer-wrapper mt-5 px-1">
           <div className="d-flex justify-content-center align-items-center mb-3">
             <div>
               <img src={Left} alt="left" />
@@ -233,7 +233,7 @@ const LandingPage = () => {
                 Follow our newsletter. We will regulary update our latest
                 project and availability
               </h6>
-              <div className="email-panel mt-5">
+              <div className="email-panel mt-5 d-none d-md-flex">
                 <div className="d-flex">
                   <img src={EmailIcon} alt="email" />
                   <input
@@ -256,9 +256,15 @@ const LandingPage = () => {
                   </h6>
                 </div>
                 <div className="col-sm-6 col-xs-12">
-                  <img src={SmartContract} alt="Smart Contract Building" />
-                  <h5 className="py-2">Smart Contract Building</h5>
-                  <h6>Development of Cryptocurrency tokens on all Networks.</h6>
+                  <div className="d-flex justify-content-end justify-content-sm-start">
+                    <img src={SmartContract} alt="Smart Contract Building" />
+                  </div>
+                  <h5 className="py-2 text-end text-sm-start">
+                    Smart Contract Building
+                  </h5>
+                  <h6 className="text-end text-sm-start">
+                    Development of Cryptocurrency tokens on all Networks.
+                  </h6>
                 </div>
                 <div className="col-sm-6 col-xs-12">
                   <img src={AppDesign} alt="App Design & Development" />
@@ -268,25 +274,40 @@ const LandingPage = () => {
                   </h6>
                 </div>
                 <div className="col-sm-6 col-xs-12">
-                  <img src={Dapp} alt="DAPP & Site Development" />
-                  <h5 className="py-2">DAPP & Site Development</h5>
-                  <h6>
+                  <div className="d-flex justify-content-end justify-content-sm-start">
+                    <img src={Dapp} alt="DAPP & Site Development" />
+                  </div>
+                  <h5 className="py-2 text-end text-sm-start">
+                    DAPP & Site Development
+                  </h5>
+                  <h6 className="text-end text-sm-start">
                     Development of Web2 and Web3 Web Applications or Websites.
                   </h6>
+                </div>
+                <div className="email-panel mt-5 d-flex d-md-none">
+                  <div className="d-flex">
+                    <img src={EmailIcon} alt="email" />
+                    <input
+                      className="email-input"
+                      type="text"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+                  <button className="subscribe-btn">Subscribe</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="github-wrapper my-5">
+        <div className="github-wrapper my-5 px-1 px-md-3 py-3">
           <div className="left px-3">
-            <img src={LogoWhite} alt="Logo" />
-            <h5 className="mx-3">X</h5>
-            <img src={Github} alt="Github" />
+            <img src={LogoWhite} alt="Logo" className="github-logoImg" />
+            <h5 className="mx-2 mb-0">X</h5>
+            <img src={Github} alt="Github" className="github-img" />
           </div>
           <div className="right px-3">
-            <h4>
+            <h4 className="fs-6 fs-md-3">
               Open-Source Github Library:<span>Nova Labs</span>
             </h4>
             <div className="play-btn"></div>

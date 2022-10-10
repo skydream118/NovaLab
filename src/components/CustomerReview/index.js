@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import LeftQuote from "../../assets/images/left-quote.png";
 import RightQuote from "../../assets/images/right-quote.png";
@@ -7,7 +7,7 @@ import RightQuote from "../../assets/images/right-quote.png";
 const CustomerReview = (props) => {
   const { records } = props;
   const [currentRecord, setCurrentRecord] = React.useState(2);
-  const [direction, setDirection] = React.useState("");
+  // const [direction, setDirection] = React.useState("");
 
   const onClickAvatar = (index) => {
     // if (index < currentRecord) {
