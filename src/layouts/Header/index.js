@@ -53,40 +53,38 @@ const Header = () => {
 
 const Hamburger = (props) => {
   return (
-    <div className={props.show ? "hamburger-show" : "hamburger"}>
+    <div className={props.show ? "hamburger active" : "hamburger"}>
       <div className="menu-background"></div>
       <img src={Logo} alt="Logo" />
-      <div className="px-3 mt-3">
-        {props.show && (
-          <div className="mt-2">
-            <div className="hamburger-item">
-              <Link to="/" className="navLink">
-                Home
-              </Link>
-            </div>
-            <div className="hamburger-item">
-              <Link to="#about" className="navLink">
-                About
-              </Link>
-            </div>
-            <div className="hamburger-item">
-              <Link to="#services" className="navLink">
-                Services
-              </Link>
-            </div>
-            <div className="hamburger-item">
-              <Link to="#portfolio" className="navLink">
-                Portfolio
-              </Link>
-            </div>
-            <div className="d-flex justify-content-center mt-3">
-              <button className="follow-btn px-3 py-2">
-                Follow Us
-                <img src={TwitterGradientImg} alt="Twitter" className="ms-2" />
-              </button>
-            </div>
+      <div className="px-3 mt-3 menu">
+        <div className="mt-2">
+          <div className="hamburger-item">
+            <Link to="/" className="navLink">
+              Home
+            </Link>
           </div>
-        )}
+          <div className="hamburger-item">
+            <Link to="#about" className="navLink">
+              About
+            </Link>
+          </div>
+          <div className="hamburger-item">
+            <Link to="#services" className="navLink">
+              Services
+            </Link>
+          </div>
+          <div className="hamburger-item">
+            <Link to="#portfolio" className="navLink">
+              Portfolio
+            </Link>
+          </div>
+          <div className="d-flex justify-content-center mt-3">
+            <button className="follow-btn px-3 py-2">
+              Follow Us
+              <img src={TwitterGradientImg} alt="Twitter" className="ms-2" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
