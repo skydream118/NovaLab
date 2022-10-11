@@ -57,27 +57,9 @@ Layouts
     .hamburger {
         padding: 1em;
         background-color: transparent;
-    }
-
-    .hamburger-show {
-        background-color: white;
-        padding: 1em;
-        border: 2px solid black;
         border-radius: 20px;
-        z-index: 10000;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
-
-        .menu-background {
-            width: 100vw;
-            height: 100vh;
-            background: transparent;
-            z-index: -1;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
+        border-width: 0px;
+        transition: background-color 2s ease;
 
         .hamburger-item {
             display: flex;
@@ -101,8 +83,9 @@ Layouts
             .img {
                 z-index: -1;
             }
-          }
-          .follow-btn::before {
+        }
+
+        .follow-btn::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -110,12 +93,49 @@ Layouts
             padding: 1px; 
             background:linear-gradient(116deg,#FFC83A,#FF008A, #6100FF); 
             -webkit-mask: 
-               linear-gradient(#fff 0 0) content-box, 
-               linear-gradient(#fff 0 0);
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
-                    mask-composite: exclude; 
-          }
+            mask-composite: exclude; 
+        }
+
+        .menu {
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0px;
+            transition: max-height 0.6s ease;
+        }
     }
+
+    .hamburger.active {
+        background-color: white;
+        padding: 1em;
+        border: 2px solid black;
+        border-radius: 20px;
+        z-index: 10000;
+
+        .menu-background {
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .menu {
+            visibility: visible;
+            height: auto;
+            max-height: 300px;
+            opacity: 1;
+            transition:  max-height 0.7s, opacity 0.5s ease;
+        }
+
+        
+    }
+
     
     
 }
