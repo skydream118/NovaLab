@@ -138,7 +138,7 @@ const LandingPage = () => {
         </div>
 
         <div className="affaliate-wrapper mx-auto">
-          <div className="left-panel">
+          <div className="left-panel pe-2">
             <img src={LinkImg} alt="link" />
             <h5 className="ms-3">Join our Affaliate program</h5>
           </div>
@@ -190,7 +190,7 @@ const LandingPage = () => {
               <div className="row gy-5">
                 {products.slice(1).map((product, index) => {
                   return (
-                    <div className="col-6">
+                    <div className="col-6" key={"product" + index}>
                       <ProductCard
                         product={product}
                         size="sm"
