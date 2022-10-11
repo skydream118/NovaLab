@@ -36,6 +36,7 @@ const CustomerReview = (props) => {
       items.push(
         // <CSSTransition key={index} classNames={direction}>
         <Item
+          key={"item" + index}
           record={records[index]}
           level={level}
           index={index}

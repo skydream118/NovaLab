@@ -389,6 +389,7 @@ $__typed-id: 0;
 			border-right: #{$caret-width} solid #{$caret-color};
 			white-space: nowrap;
 			animation: #{$animation-name}-caret #{$caret-speed}s linear #{$animation-delay}s infinite forwards;
+			z-index: -10;
 		}
 	}
 	// now THIS is where the magic happens... ✨
